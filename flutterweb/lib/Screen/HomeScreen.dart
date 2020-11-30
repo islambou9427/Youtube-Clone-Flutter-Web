@@ -22,10 +22,10 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               Positioned(
                 left: width * 0.231,
-                top: 15,
+                top: 16,
                 child: Container(
                   width: width * 0.446,
-                  height: 30,
+                  height: 32,
                   color: Colors.black,
                   child: TextFormField(
                     cursorColor: Colors.white,
@@ -42,6 +42,22 @@ class _HomeScreenState extends State<HomeScreen> {
                           borderSide: BorderSide(
                             color: Color.fromRGBO(28, 98, 185, 1),
                           )),
+                    ),
+                  ),
+                ),
+              ),
+              Positioned(
+                left: width * 0.675,
+                top: 16,
+                child: Container(
+                  color: Color.fromRGBO(51, 51, 51, 1),
+                  width: 60,
+                  height: 32,
+                  child: FlatButton(
+                    onPressed: () {},
+                    child: Icon(
+                      Icons.search,
+                      color: Color.fromRGBO(117, 117, 117, 1),
                     ),
                   ),
                 ),
