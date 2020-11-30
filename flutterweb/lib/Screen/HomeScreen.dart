@@ -133,6 +133,12 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           onPressed: () {},
         ),
+        SizedBox(
+          width: 18,
+        ),
+        Image.asset(
+          "a.png",
+        ),
       ],
     );
   }
