@@ -51,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 top: 16,
                 child: Container(
                   color: Color.fromRGBO(51, 51, 51, 1),
-                  width: 60,
+                  width: 63,
                   height: 32,
                   child: FlatButton(
                     onPressed: () {},
@@ -64,6 +64,11 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               Positioned(
                 child: leftIcon(),
+              ),
+              Positioned(
+                top: 12,
+                left: width * 0.823,
+                child: rightIcon(),
               )
             ],
           ),
@@ -75,11 +80,59 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget leftIcon() {
     return Row(
       children: [
+        Padding(
+          padding: const EdgeInsets.only(left: 14, bottom: 4.7),
+          child: IconButton(
+            icon: Icon(
+              Icons.menu,
+              color: Colors.white,
+              size: 27,
+            ),
+            onPressed: () {},
+          ),
+        ),
+        Image.asset(
+          "o.png",
+          width: 130,
+          height: 70,
+        ),
+      ],
+    );
+  }
+
+  Widget rightIcon() {
+    return Row(
+      children: [
         IconButton(
-          icon: Icon(Icons.menu),
+          icon: Icon(
+            Icons.video_call,
+            color: Colors.white,
+            size: 25,
+          ),
           onPressed: () {},
         ),
-        Image.asset("o.png"),
+        SizedBox(
+          width: 8,
+        ),
+        IconButton(
+          icon: Icon(
+            Icons.apps,
+            color: Colors.white,
+            size: 25,
+          ),
+          onPressed: () {},
+        ),
+        SizedBox(
+          width: 8,
+        ),
+        IconButton(
+          icon: Icon(
+            Icons.notifications,
+            color: Colors.white,
+            size: 25,
+          ),
+          onPressed: () {},
+        ),
       ],
     );
   }
