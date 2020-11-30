@@ -61,11 +61,26 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
+              ),
+              Positioned(
+                child: leftIcon(),
               )
             ],
           ),
         ),
       ),
+    );
+  }
+
+  Widget leftIcon() {
+    return Row(
+      children: [
+        IconButton(
+          icon: Icon(Icons.menu),
+          onPressed: () {},
+        ),
+        Image.asset("o.png"),
+      ],
     );
   }
 }
