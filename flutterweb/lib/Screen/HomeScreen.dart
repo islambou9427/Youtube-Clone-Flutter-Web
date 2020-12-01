@@ -74,6 +74,29 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
+      body: Container(
+        child: Row(
+          children: [
+            Container(
+              width: width * 0.06,
+              height: height,
+              color: Color.fromRGBO(32, 32, 32, 1),
+              child: Positioned(
+                left: 0,
+                child: Column(
+                  children: [
+                    LeftIcon(icon: Icons.home, text: "Accueil"),
+                    LeftIcon(
+                        icon: Icons.local_fire_department, text: "Tandances"),
+                    LeftIcon(icon: Icons.subscriptions, text: "Abonnements"),
+                    LeftIcon(icon: Icons.video_library, text: "Bibliothèque"),
+                  ],
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 
@@ -140,6 +163,35 @@ class _HomeScreenState extends State<HomeScreen> {
           "a.png",
         ),
       ],
+    );
+  }
+}
+
+class LeftIcon extends StatelessWidget {
+  final IconData icon;
+  final String text;
+
+  const LeftIcon({Key key, this.icon, this.text}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    return Container(
+      width: width * 0.06,
+      height: 67,
+      margin: EdgeInsets.only(top: 8),
+      child: Column(
+        children: [
+          IconButton(
+            icon: Icon(icon, color: Colors.white),
+            onPressed: () {},
+          ),
+          Text(
+            text,
+            style: TextStyle(color: Colors.white, fontSize: 10),
+          )
+        ],
+      ),
     );
   }
 }
