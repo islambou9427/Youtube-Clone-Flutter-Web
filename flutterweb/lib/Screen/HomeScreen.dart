@@ -77,6 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Container(
         child: Row(
           children: [
+            // Body Section left Védios
             Container(
               width: width * 0.06,
               height: height,
@@ -93,7 +94,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-            )
+            ),
+            // Body Section center Védios
           ],
         ),
       ),
