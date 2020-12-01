@@ -96,6 +96,33 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             // Body Section center Védios
+
+            Container(
+              width: width - width * 0.06,
+              height: height,
+              child: Column(
+                children: [
+                  // First Line
+                  Row(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(20),
+                        color: Colors.white,
+                        width: (width - width * 0.06) / 4.5,
+                        height: 250,
+                        child: Column(
+                          children: [
+                            Image.asset("0.png"),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  // Second Line
+                ],
+              ),
+            ),
           ],
         ),
       ),
