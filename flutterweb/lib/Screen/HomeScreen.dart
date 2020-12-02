@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -105,11 +107,71 @@ class _HomeScreenState extends State<HomeScreen> {
                   // First Line
                   Row(
                     children: [
-                      VideowithTitle(width: width),
+                      VideowithTitle(
+                        img1: "0.png",
+                        img2: "00.png",
+                        title: "Princess Diana with his friend",
+                        nChannel: "Learn English ",
+                        vues: "285k vues - il y a 9 mois",
+                      ),
+                      VideowithTitle(
+                        img1: "6.png",
+                        img2: "11.png",
+                        title: "Princess Diana with his friend",
+                        nChannel: "Learn English ",
+                        vues: "285k vues - il y a 9 mois",
+                      ),
+                      VideowithTitle(
+                        img1: "2.png",
+                        img2: "22.png",
+                        title: "Princess Diana with his friend",
+                        nChannel: "Learn English ",
+                        vues: "285k vues - il y a 9 mois",
+                      ),
+                      VideowithTitle(
+                        img1: "3.png",
+                        img2: "33.png",
+                        title: "Princess Diana with his friend",
+                        nChannel: "Learn English ",
+                        vues: "285k vues - il y a 9 mois",
+                      ),
                     ],
                   ),
 
                   // Second Line
+
+                  Row(
+                    children: [
+                      VideowithTitle(
+                        img1: "4.png",
+                        img2: "55.png",
+                        title: "Princess Diana with his friend",
+                        nChannel: "Learn English ",
+                        vues: "285k vues - il y a 9 mois",
+                      ),
+                      VideowithTitle(
+                        img1: "6.png",
+                        img2: "66.png",
+                        title: "Princess Diana with his friend",
+                        nChannel: "Learn English ",
+                        vues: "285k vues - il y a 9 mois",
+                      ),
+                      VideowithTitle(
+                        img1: "7.png",
+                        img2: "88.png",
+                        title: "Princess Diana with his friend",
+                        nChannel: "Learn English ",
+                        vues: "285k vues - il y a 9 mois",
+                      ),
+                      VideowithTitle(
+                        img1: "0.png",
+                        img2: "00.png",
+                        title: "Princess Diana with his friend",
+                        nChannel: "Learn English ",
+                        vues: "285k vues - il y a 9 mois",
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
@@ -187,7 +249,7 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 class VideowithTitle extends StatelessWidget {
-  final Image img1, img2;
+  final String img1, img2;
   final String title, nChannel, vues;
 
   const VideowithTitle(
@@ -195,28 +257,30 @@ class VideowithTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+
     return Container(
-      margin: EdgeInsets.all(20),
+      margin: EdgeInsets.all(16),
       width: (width - width * 0.06) / 4.5,
       height: 250,
       child: Column(
         children: [
-          Image.asset("0.png"),
+          Image.asset(img1),
           Row(
             children: [
-              Image.asset("11.png"),
+              Image.asset(img2),
               Padding(
                 padding: const EdgeInsets.only(left: 8, top: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Princess Diana by Cherry",
+                    Text(title,
                         style: TextStyle(
                             color: Colors.white, fontWeight: FontWeight.w800)),
                     SizedBox(
                       height: 11,
                     ),
-                    Text("English Language Academy",
+                    Text(nChannel,
                         style: TextStyle(
                             color: Colors.white54,
                             fontSize: 13,
@@ -224,7 +288,7 @@ class VideowithTitle extends StatelessWidget {
                     SizedBox(
                       height: 3,
                     ),
-                    Text("285k vues - il y a 9 mois",
+                    Text(vues,
                         style: TextStyle(
                             color: Colors.white54,
                             fontSize: 13,
