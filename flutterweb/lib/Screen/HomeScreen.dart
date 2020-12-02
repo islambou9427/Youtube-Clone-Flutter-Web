@@ -114,10 +114,32 @@ class _HomeScreenState extends State<HomeScreen> {
                             Image.asset("0.png"),
                             Row(
                               children: [
-                                Image.asset(""),
-                                Text(
-                                  "Princess Diana by Cherry",
-                                  style: TextStyle(color: Colors.white),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 10),
+                                  child: Image.asset("11.png"),
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(left: 8, top: 20),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Text("Princess Diana by Cherry",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w800)),
+                                      Text("English Language Academy",
+                                          style: TextStyle(
+                                              color: Colors.white54,
+                                              fontSize: 13,
+                                              fontWeight: FontWeight.w100)),
+                                      Text("285k vues - il y a 9 mois",
+                                          style: TextStyle(
+                                              color: Colors.white54,
+                                              fontSize: 13,
+                                              fontWeight: FontWeight.w100)),
+                                    ],
+                                  ),
                                 ),
                               ],
                             )
